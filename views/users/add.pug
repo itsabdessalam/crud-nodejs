@@ -1,0 +1,36 @@
+extends ../layout
+block content
+    .main-form.uk-position-center.uk-container-center.text-center 
+        .hello
+            img(src='/images/nodejsblog.png', width='230px', alt='')
+            h4
+                small Built with NodeJS
+        form.uk-form-width-large(method="POST")
+            fieldset.uk-fieldset
+                .uk-margin
+                    .uk-inline
+                        a.uk-form-icon(uk-icon='icon: user')
+                        input.uk-input.uk-form-width-large(type='text', name='username', placeholder='Username')
+                .uk-margin
+                    .uk-inline
+                        a.uk-form-icon(uk-icon='icon: mail')
+                        input.uk-input.uk-form-width-large(type='email', name='email', placeholder='Email')
+
+                .uk-margin
+                    select.uk-select(name="type")
+                        option Admin
+                        option Basic
+                .uk-margin
+                    .uk-inline
+                        a.uk-form-icon(uk-icon='icon: lock')
+                        input.uk-input.uk-form-width-large(type='password', name='password', placeholder='Password')
+                .uk-margin
+                    .uk-inline
+                        a.uk-form-icon(uk-icon='icon: check')
+                        input.uk-input.uk-form-width-large(type='password', name='password_c', placeholder='Password confirmation')
+                .uk-margin
+                    .uk-inline
+                        button.uk-button.uk-button-custom.uk-button-primary.uk-form-width-medium Sign Up
+                p
+                    | Already have an account? 
+                    a(href="/users/signin") Sign In

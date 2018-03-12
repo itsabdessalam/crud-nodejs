@@ -1,0 +1,22 @@
+html
+  head
+    title= title
+    link(rel="stylesheet", href="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-beta.40/css/uikit.min.css")
+    link(rel='stylesheet', href='/stylesheets/style.css')
+  body.uk-container
+    .uk-container
+      nav.uk-navbar-container(uk-navbar='')
+        .uk-navbar-right
+          ul.uk-navbar-nav
+            if user 
+              li
+                a(href='#')= user[0].username
+                .uk-navbar-dropdown
+                  ul.uk-nav.uk-navbar-dropdown-nav
+                    li
+                      a(href='#') Mon compte
+                      a(href="/users/logout") Déconnexion
+    block content
+  script(src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-beta.40/js/uikit.min.js")
+  script(src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-beta.40/js/uikit-icons.min.js")
+

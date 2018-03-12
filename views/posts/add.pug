@@ -1,0 +1,18 @@
+extends ../layout
+block content
+    .main-form.uk-position-center.uk-container-center.text-center 
+        .hello
+            img(src='/images/nodejsblog.png', width='230px', alt='')
+            h4
+                small Built with NodeJS
+        form.uk-form-width-large(method="POST")
+            fieldset.uk-fieldset
+                .uk-margin
+                    .uk-inline
+                        a.uk-form-icon(uk-icon='icon:  file-edit')
+                        input.uk-input.uk-form-width-large(type='text', name='title', placeholder='Title')
+                .uk-margin
+                    textarea.uk-textarea(rows='5', placeholder='Textarea', name='content')
+                .uk-margin
+                    .uk-inline
+                        button.uk-button.uk-button-custom.uk-button-primary.uk-form-width-medium Add Post

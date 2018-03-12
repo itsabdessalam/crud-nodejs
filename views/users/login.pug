@@ -1,0 +1,23 @@
+extends ../layout
+block content
+    .main-form.uk-position-center.uk-container-center.text-center 
+        .hello
+            img(src='/images/nodejsblog.png', width='230px', alt='')
+            h4
+                small Built with NodeJS
+        form.uk-form-width-large(method="POST")
+            fieldset.uk-fieldset
+                .uk-margin
+                    .uk-inline
+                        a.uk-form-icon(uk-icon='icon: mail')
+                        input.uk-input.uk-form-width-large(type='email', name='email', placeholder='Email')
+                .uk-margin
+                    .uk-inline
+                        a.uk-form-icon(uk-icon='icon: lock')
+                        input.uk-input.uk-form-width-large(type='password', name='password', placeholder='Password')
+                .uk-margin
+                    .uk-inline
+                        button.uk-button.uk-button-custom.uk-button-primary.uk-form-width-medium Sign In
+                p
+                    | You don't have an account ? 
+                    a(href="/users/signup") Sign Up

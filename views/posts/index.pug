@@ -1,0 +1,21 @@
+extends ../layout
+block content
+    .uk-container
+        h1 All Posts
+        if posts.length>0
+            each post in posts
+                article.uk-comment
+                    header.uk-comment-header.uk-grid-medium.uk-flex-middle(uk-grid='')
+                        .uk-width-expand
+                            h4.uk-comment-title.uk-margin-remove
+                                a.uk-link-reset(href='#')=post.author
+                            ul.uk-comment-meta.uk-subnav.uk-subnav-divider.uk-margin-remove-top
+                                li
+                                    a(href='#')=moment(post.created_on).format("DD-MM-YYYY")
+
+                    .uk-comment-body
+                        p=(post.content).substring(0,30) + ' ...'
+                    .uk-margin.link
+                        a(href="/users/dashboard/posts/"+post._id class="uk-button uk-button-custom uk-button-primary uk-form-width-medium") Go to
+        else
+            span no post
