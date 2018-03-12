@@ -5,10 +5,11 @@ block content
             header.uk-comment-header.uk-grid-medium.uk-flex-middle(uk-grid='')
                 .uk-width-expand
                     h4.uk-comment-title.uk-margin-remove
-                        a.uk-link-reset(href='#')=post.author
+                        a.uk-link-reset(href='#')=post.title
                     ul.uk-comment-meta.uk-subnav.uk-subnav-divider.uk-margin-remove-top
                         li
                             a(href='#')=moment(post.created_on).format("DD-MM-YYYY")
+                            span by #{post.author}
 
             .uk-comment-body
                 p=(post.content)
